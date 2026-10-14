@@ -9,20 +9,59 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node 20
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - uses: actions/setup-java@v4
+
+      - name: Java 21
+        uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '21'
-      - uses: android-actions/setup-android@v4
-      - run: npm install
-      - run: npx cap add android
-      - run: npx cap sync android
-      - run: cd android && chmod +x gradlew && ./gradlew assembleDebug --no-daemon
-      - uses: actions/upload-artifact@v4
+
+      - name: Android SDK
+        uses: android-actions/setup-android@v4
+
+      - name: Instalar dependencias del sistema
+        run: sudo apt-get update && sudo apt-get install -y imagemagick
+
+      - name: Convertir icono y splash
+        run: |
+          mkdir -p resources
+          if [ -f resources/icon.jpg ]; then
+            convert resources/icon.jpg -resize 1024x1024^ -gravity center -extent 1024x1024 resources/icon.png
+          fi
+          if [ -f resources/icon.png ]; then
+            convert -size 2732x2732 xc:'#0a0a15' \( resources/icon.png -resize 800x800 \) -gravity center -composite resources/splash.png
+          fi
+          ls -la resources/
+
+      - name: Instalar dependencias npm
+        run: npm install
+
+      - name: Añadir plataforma Android
+        run: npx cap add android
+
+      - name: Generar iconos de la app
+        run: |
+          npm install @capacitor/assets --save-dev
+          npx @capacitor/assets generate --android || echo "assets generate falló, continuando"
+
+      - name: Sincronizar
+        run: npx cap sync android
+
+      - name: Compilar APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Subir APK
+        uses: actions/upload-artifact@v4
         with:
           name: flor-finanzas-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk

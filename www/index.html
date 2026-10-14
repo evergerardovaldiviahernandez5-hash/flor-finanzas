@@ -225,52 +225,52 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;bac
 
 <div class="splash" id="splash">
 <svg class="flower" viewBox="0 0 100 100"><ellipse cx="50" cy="22" rx="10" ry="20" fill="#fd79a8"/><ellipse cx="74" cy="36" rx="10" ry="20" fill="#a29bfe" transform="rotate(60 50 50)"/><ellipse cx="74" cy="64" rx="10" ry="20" fill="#f9ca24" transform="rotate(120 50 50)"/><ellipse cx="50" cy="78" rx="10" ry="20" fill="#fd79a8" transform="rotate(180 50 50)"/><ellipse cx="26" cy="64" rx="10" ry="20" fill="#a29bfe" transform="rotate(240 50 50)"/><ellipse cx="26" cy="36" rx="10" ry="20" fill="#f9ca24" transform="rotate(300 50 50)"/><circle cx="50" cy="50" r="12" fill="#f9ca24"/></svg>
-<h2>Flor de Finanzas</h2>
+<h2>🌸 Flor de Finanzas</h2>
 <p>V 3 . 0</p>
 </div>
 
 <div id="app">
 <section class="view active" id="v-home">
-<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-flower"/></svg></div><div><h1>Flor de Finanzas</h1><p id="dateLabel">—</p></div></div><button class="icon-btn" id="themeBtn" onclick="toggleTheme()"><svg><use href="#i-moon"/></svg></button></div>
-<div class="balance-hero"><div class="balance-lbl"><svg><use href="#i-wallet"/></svg>Balance total</div><div class="balance-amt" id="balAmt">$0.00</div><div class="bal-row"><div class="bal-mini"><div class="lbl"><svg style="color:var(--income)"><use href="#i-arrow-down"/></svg>Ingresos</div><div class="val inc" id="sumInc">$0.00</div></div><div class="bal-mini"><div class="lbl"><svg style="color:var(--expense)"><use href="#i-arrow-up"/></svg>Gastos</div><div class="val exp" id="sumExp">$0.00</div></div></div></div>
+<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-flower"/></svg></div><div><h1>🌸 Flor de Finanzas</h1><p id="dateLabel">—</p></div></div><button class="icon-btn" id="themeBtn" onclick="toggleTheme()"><svg><use href="#i-moon"/></svg></button></div>
+<div class="balance-hero"><div class="balance-lbl"><svg><use href="#i-wallet"/></svg>💰 Balance total</div><div class="balance-amt" id="balAmt">$0.00</div><div class="bal-row"><div class="bal-mini"><div class="lbl"><svg style="color:var(--income)"><use href="#i-arrow-down"/></svg>Ingresos</div><div class="val inc" id="sumInc">$0.00</div></div><div class="bal-mini"><div class="lbl"><svg style="color:var(--expense)"><use href="#i-arrow-up"/></svg>Gastos</div><div class="val exp" id="sumExp">$0.00</div></div></div></div>
 <div class="month-nav"><button onclick="shiftMonth(-1)"><svg><use href="#i-chev-left"/></svg></button><span id="monthLabel">—</span><button onclick="shiftMonth(1)"><svg><use href="#i-chev-right"/></svg></button></div>
-<div class="card"><div class="card-title"><svg><use href="#i-plus"/></svg>Nuevo movimiento</div><div class="qa-grid"><button class="qa-btn exp active" id="btnExp" onclick="setType('expense')"><svg><use href="#i-arrow-up"/></svg>Gasto</button><button class="qa-btn inc" id="btnInc" onclick="setType('income')"><svg><use href="#i-arrow-down"/></svg>Ingreso</button></div><div class="field"><label>Monto</label><input type="number" id="inAmt" placeholder="0.00" inputmode="decimal" step="0.01" min="0"></div><div class="field"><label>Categoría</label><select id="inCat"></select></div><div class="w-chip-row" id="walletPicker" style="display:flex;gap:8px;overflow-x:auto;padding:2px;margin-bottom:12px"></div><div class="field"><label>Descripción (opcional)</label><input type="text" id="inDesc" placeholder="Ej: Café con amigos" maxlength="40"></div><div class="field"><label>Fecha</label><input type="date" id="inDate"></div><button class="btn" id="btnSave" onclick="saveTx()"><svg><use href="#i-check"/></svg>Guardar movimiento</button></div>
-<div class="card"><div class="card-title"><svg><use href="#i-tag"/></svg>Recientes<span class="sp"></span><span class="badge" id="recentCount">0</span></div><div id="txListHome"></div></div>
+<div class="card"><div class="card-title"><svg><use href="#i-plus"/></svg>✨ Nuevo movimiento</div><div class="qa-grid"><button class="qa-btn exp active" id="btnExp" onclick="setType('expense')"><svg><use href="#i-arrow-up"/></svg>Gasto</button><button class="qa-btn inc" id="btnInc" onclick="setType('income')"><svg><use href="#i-arrow-down"/></svg>Ingreso</button></div><div class="field"><label>Monto</label><input type="number" id="inAmt" placeholder="0.00" inputmode="decimal" step="0.01" min="0"></div><div class="field"><label>Categoría</label><select id="inCat"></select></div><div class="w-chip-row" id="walletPicker" style="display:flex;gap:8px;overflow-x:auto;padding:2px;margin-bottom:12px"></div><div class="field"><label>Descripción (opcional)</label><input type="text" id="inDesc" placeholder="Ej: Café con amigos" maxlength="40"></div><div class="field"><label>Fecha</label><input type="date" id="inDate"></div><button class="btn" id="btnSave" onclick="saveTx()"><svg><use href="#i-check"/></svg>Guardar movimiento</button></div>
+<div class="card"><div class="card-title"><svg><use href="#i-tag"/></svg>🕐 Recientes<span class="sp"></span><span class="badge" id="recentCount">0</span></div><div id="txListHome"></div></div>
 </section>
 <section class="view" id="v-movs">
-<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-tag"/></svg></div><div><h1>Movimientos</h1><p>Historial completo</p></div></div></div>
+<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-tag"/></svg></div><div><h1>📋 Movimientos</h1><p>Historial completo</p></div></div></div>
 <input class="search" id="searchBox" placeholder="Buscar por descripción o categoría..." oninput="renderMovs()">
 <div class="pill-row" id="typeFilters"><button class="pill active" data-f="all" onclick="setTypeFilter('all',this)"><svg><use href="#i-filter"/></svg>Todos</button><button class="pill" data-f="income" onclick="setTypeFilter('income',this)"><svg><use href="#i-arrow-down"/></svg>Ingresos</button><button class="pill" data-f="expense" onclick="setTypeFilter('expense',this)"><svg><use href="#i-arrow-up"/></svg>Gastos</button></div>
-<div class="card" style="padding:14px"><div class="card-title"><svg><use href="#i-calendar"/></svg>Movimientos<span class="sp"></span><span class="badge" id="movCount">0</span></div><div id="txListFull"></div></div>
+<div class="card" style="padding:14px"><div class="card-title"><svg><use href="#i-calendar"/></svg>📋 Movimientos<span class="sp"></span><span class="badge" id="movCount">0</span></div><div id="txListFull"></div></div>
 </section>
 <section class="view" id="v-stats">
-<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-stats"/></svg></div><div><h1>Análisis</h1><p>Tu mes en números</p></div></div></div>
+<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-stats"/></svg></div><div><h1>📊 Análisis</h1><p>Tu mes en números</p></div></div></div>
 <div class="month-nav"><button onclick="shiftMonth(-1)"><svg><use href="#i-chev-left"/></svg></button><span id="monthLabelStats">—</span><button onclick="shiftMonth(1)"><svg><use href="#i-chev-right"/></svg></button></div>
 <div class="kpi-row"><div class="kpi"><div class="l"><svg style="color:var(--income)"><use href="#i-arrow-down"/></svg>Ingresos</div><div class="v" style="color:var(--income)" id="kInc">$0</div></div><div class="kpi"><div class="l"><svg style="color:var(--expense)"><use href="#i-arrow-up"/></svg>Gastos</div><div class="v" style="color:var(--expense)" id="kExp">$0</div></div><div class="kpi"><div class="l"><svg style="color:var(--primary)"><use href="#i-trending"/></svg>Ahorro</div><div class="v" style="color:var(--primary)" id="kSav">$0</div></div><div class="kpi"><div class="l"><svg><use href="#i-calendar"/></svg>Prom/día</div><div class="v" id="kAvg">$0</div></div></div>
 <div class="compare" id="compareBox" style="display:none"></div>
-<div class="card"><div class="card-title"><svg><use href="#i-chart"/></svg>Gastos por categoría</div><div class="chart-wrap"><canvas id="pieChart" width="260" height="260"></canvas></div><div class="chart-legend" id="pieLegend"></div></div>
-<div class="card"><div class="card-title"><svg><use href="#i-trending"/></svg>Top categorías</div><div class="bar-row" id="barList"></div></div>
-<div class="card"><div class="card-title"><svg><use href="#i-filter"/></svg>Presupuestos del mes</div><div id="budgetList"></div><button class="btn ghost sm" style="margin-top:12px" onclick="openBudgetModal()"><svg><use href="#i-plus"/></svg>Nuevo presupuesto</button></div>
+<div class="card"><div class="card-title"><svg><use href="#i-chart"/></svg>🍰 Gastos por categoría</div><div class="chart-wrap"><canvas id="pieChart" width="260" height="260"></canvas></div><div class="chart-legend" id="pieLegend"></div></div>
+<div class="card"><div class="card-title"><svg><use href="#i-trending"/></svg>🏆 Top categorías</div><div class="bar-row" id="barList"></div></div>
+<div class="card"><div class="card-title"><svg><use href="#i-filter"/></svg>📏 Presupuestos del mes</div><div id="budgetList"></div><button class="btn ghost sm" style="margin-top:12px" onclick="openBudgetModal()"><svg><use href="#i-plus"/></svg>Nuevo presupuesto</button></div>
 </section>
 <section class="view" id="v-wallets">
-<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-wallet"/></svg></div><div><h1>Mis cuentas</h1><p>Billeteras y ahorros</p></div></div><button class="icon-btn" onclick="openWalletModal()"><svg><use href="#i-plus"/></svg></button></div>
-<div class="card"><div class="card-title"><svg><use href="#i-wallet"/></svg>Cuentas<span class="sp"></span><span class="badge" id="walletsTotal">$0</span></div><div id="walletsList"></div></div>
-<div class="card"><div class="card-title"><svg><use href="#i-target"/></svg>Metas de ahorro<span class="sp"></span><button class="icon-btn" style="width:32px;height:32px;border-radius:10px" onclick="openGoalModal()"><svg style="width:16px;height:16px"><use href="#i-plus"/></svg></button></div><div id="goalsList"></div></div>
+<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-wallet"/></svg></div><div><h1>💼 Mis cuentas</h1><p>Billeteras y ahorros</p></div></div><button class="icon-btn" onclick="openWalletModal()"><svg><use href="#i-plus"/></svg></button></div>
+<div class="card"><div class="card-title"><svg><use href="#i-wallet"/></svg>💳 Cuentas<span class="sp"></span><span class="badge" id="walletsTotal">$0</span></div><div id="walletsList"></div></div>
+<div class="card"><div class="card-title"><svg><use href="#i-target"/></svg>🎯 Metas de ahorro<span class="sp"></span><button class="icon-btn" style="width:32px;height:32px;border-radius:10px" onclick="openGoalModal()"><svg style="width:16px;height:16px"><use href="#i-plus"/></svg></button></div><div id="goalsList"></div></div>
 </section>
 <section class="view" id="v-set">
-<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-settings"/></svg></div><div><h1>Ajustes</h1><p>Personalización</p></div></div></div>
-<div class="card"><div class="card-title"><svg><use href="#i-sun"/></svg>Apariencia</div><div class="row"><button class="btn ghost sm" onclick="setTheme('dark')"><svg><use href="#i-moon"/></svg>Oscuro</button><button class="btn ghost sm" onclick="setTheme('light')"><svg><use href="#i-sun"/></svg>Claro</button></div></div>
-<div class="card"><div class="card-title"><svg><use href="#i-download"/></svg>Datos</div><button class="btn ghost sm" style="margin-bottom:8px" onclick="exportJSON()"><svg><use href="#i-upload"/></svg>Exportar JSON</button><button class="btn ghost sm" style="margin-bottom:8px" onclick="exportCSV()"><svg><use href="#i-upload"/></svg>Exportar CSV</button><button class="btn ghost sm" style="margin-bottom:8px" onclick="document.getElementById('impFile').click()"><svg><use href="#i-download"/></svg>Importar</button><input type="file" id="impFile" accept=".json" style="display:none" onchange="importJSON(event)"><button class="btn danger sm" onclick="clearAll()"><svg><use href="#i-trash"/></svg>Borrar todos los datos</button></div>
-<div class="card"><div class="card-title"><svg><use href="#i-info"/></svg>Acerca de</div><div style="font-size:.8rem;color:var(--text2);line-height:1.7"><b style="color:var(--text);font-size:.9rem">Flor de Finanzas v3.0</b><br>Gestor personal de finanzas · Open Source · MIT<br>Hecho con 🌸 desde Cuba · Sin publicidad · 100% offline</div></div>
+<div class="hdr"><div class="brand"><div class="brand-logo"><svg viewBox="0 0 24 24"><use href="#i-settings"/></svg></div><div><h1>⚙️ Ajustes</h1><p>Personalización</p></div></div></div>
+<div class="card"><div class="card-title"><svg><use href="#i-sun"/></svg>🎨 Apariencia</div><div class="row"><button class="btn ghost sm" onclick="setTheme('dark')"><svg><use href="#i-moon"/></svg>Oscuro</button><button class="btn ghost sm" onclick="setTheme('light')"><svg><use href="#i-sun"/></svg>Claro</button></div></div>
+<div class="card"><div class="card-title"><svg><use href="#i-download"/></svg>💾 Datos</div><button class="btn ghost sm" style="margin-bottom:8px" onclick="exportJSON()"><svg><use href="#i-upload"/></svg>Exportar JSON</button><button class="btn ghost sm" style="margin-bottom:8px" onclick="exportCSV()"><svg><use href="#i-upload"/></svg>Exportar CSV</button><button class="btn ghost sm" style="margin-bottom:8px" onclick="document.getElementById('impFile').click()"><svg><use href="#i-download"/></svg>Importar</button><input type="file" id="impFile" accept=".json" style="display:none" onchange="importJSON(event)"><button class="btn danger sm" onclick="clearAll()"><svg><use href="#i-trash"/></svg>Borrar todos los datos</button></div>
+<div class="card"><div class="card-title"><svg><use href="#i-info"/></svg>ℹ️ Acerca de</div><div style="font-size:.8rem;color:var(--text2);line-height:1.7"><b style="color:var(--text);font-size:.9rem">Flor de Finanzas v3.0</b><br>Gestor personal de finanzas · Open Source · MIT<br>Hecho con 🌸 desde Cuba · Sin publicidad · 100% offline</div></div>
 </section>
 </div>
 
 <nav class="nav">
-<button class="nav-btn active" data-v="home" onclick="go('home',this)"><svg><use href="#i-home"/></svg>Inicio</button>
-<button class="nav-btn" data-v="movs" onclick="go('movs',this)"><svg><use href="#i-tag"/></svg>Movs</button>
-<button class="nav-btn" data-v="stats" onclick="go('stats',this)"><svg><use href="#i-stats"/></svg>Análisis</button>
-<button class="nav-btn" data-v="wallets" onclick="go('wallets',this)"><svg><use href="#i-wallet"/></svg>Cuentas</button>
-<button class="nav-btn" data-v="set" onclick="go('set',this)"><svg><use href="#i-settings"/></svg>Ajustes</button>
+<button class="nav-btn active" data-v="home" onclick="go('home',this)"><svg><use href="#i-home"/></svg>🏠 Inicio</button>
+<button class="nav-btn" data-v="movs" onclick="go('movs',this)"><svg><use href="#i-tag"/></svg>📋 Movs</button>
+<button class="nav-btn" data-v="stats" onclick="go('stats',this)"><svg><use href="#i-stats"/></svg>📊 Datos</button>
+<button class="nav-btn" data-v="wallets" onclick="go('wallets',this)"><svg><use href="#i-wallet"/></svg>💼 Cuentas</button>
+<button class="nav-btn" data-v="set" onclick="go('set',this)"><svg><use href="#i-settings"/></svg>⚙️ Más</button>
 </nav>
 
 <div class="modal-bg" id="modalBg" onclick="closeModal()"></div>
@@ -284,24 +284,24 @@ var KEY='flor_v3';
 function ic(n){return '<svg><use href="#i-'+n+'"/></svg>'}
 var DEF_CATS={
 expense:[
-{id:'food',n:'Comida',c:'#ff9f43',i:'food'},
-{id:'transport',n:'Transporte',c:'#54a0ff',i:'transport'},
-{id:'fun',n:'Ocio',c:'#f368e0',i:'fun'},
-{id:'shop',n:'Compras',c:'#1dd1a1',i:'shop'},
-{id:'health',n:'Salud',c:'#ff6b6b',i:'health'},
-{id:'home',n:'Hogar',c:'#a29bfe',i:'house'},
-{id:'edu',n:'Educación',c:'#00cec9',i:'edu'},
+{id:'food',n:'🍔 Comida',c:'#ff9f43',i:'food'},
+{id:'transport',n:'🚌 Transporte',c:'#54a0ff',i:'transport'},
+{id:'fun',n:'🎬 Ocio',c:'#f368e0',i:'fun'},
+{id:'shop',n:'🛍️ Compras',c:'#1dd1a1',i:'shop'},
+{id:'health',n:'💊 Salud',c:'#ff6b6b',i:'health'},
+{id:'home',n:'🏠 Hogar',c:'#a29bfe',i:'house'},
+{id:'edu',n:'📚 Educación',c:'#00cec9',i:'edu'},
 {id:'other',n:'Otros',c:'#b2bec3',i:'tag'}],
 income:[
-{id:'salary',n:'Salario',c:'#00d9a3',i:'salary'},
-{id:'free',n:'Freelance',c:'#0984e3',i:'laptop'},
-{id:'gift',n:'Regalo',c:'#fd79a8',i:'gift'},
-{id:'inv',n:'Inversión',c:'#6c5ce7',i:'trending'},
+{id:'salary',n:'💼 Salario',c:'#00d9a3',i:'salary'},
+{id:'free',n:'💻 Freelance',c:'#0984e3',i:'laptop'},
+{id:'gift',n:'🎁 Regalo',c:'#fd79a8',i:'gift'},
+{id:'inv',n:'📈 Inversión',c:'#6c5ce7',i:'trending'},
 {id:'other_i',n:'Otros ingresos',c:'#b2bec3',i:'tag'}]};
 var DEF_WALLETS=[
-{id:'cash',n:'Efectivo',c:'#00d9a3',i:'cash'},
-{id:'bank',n:'Banco',c:'#54a0ff',i:'bank'},
-{id:'save',n:'Ahorros',c:'#fd79a8',i:'piggy'}];
+{id:'cash',n:'💵 Efectivo',c:'#00d9a3',i:'cash'},
+{id:'bank',n:'🏦 Banco',c:'#54a0ff',i:'bank'},
+{id:'save',n:'🐷 Ahorros',c:'#fd79a8',i:'piggy'}];
 var S={transactions:[],goals:[],wallets:[],budgets:[],categories:DEF_CATS,settings:{theme:'dark'}};
 var editingId=null,currentType='expense',activeWallet='cash',filterType='all',currentMonth=new Date(),delayT=null;
 function $(id){return document.getElementById(id)}
