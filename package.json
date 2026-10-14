@@ -1,0 +1,14 @@
+{
+  "name": "flor-finanzas",
+  "version": "3.0.0",
+  "description": "Gestor de finanzas personales open source para Android",
+  "author": "evergerardovaldiviahernandez5-hash",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
+}

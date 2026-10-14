@@ -1,0 +1,7 @@
+{
+  "appId": "com.evergerardo.florfinanzas",
+  "appName": "Flor de Finanzas",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "android": { "allowMixedContent": true }
+}
